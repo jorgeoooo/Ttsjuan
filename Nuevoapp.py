@@ -2,7 +2,7 @@ import streamlit as st
 from gtts import gTTS
 from io import BytesIO
 
-st.title("🔊 Texto a voz en español")
+st.title("🔊 Texto a voz")
 
 texto = st.text_area(
     "Escribe el texto:",
