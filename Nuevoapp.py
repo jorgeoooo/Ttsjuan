@@ -12,15 +12,11 @@ texto = st.text_area(
 if st.button("▶️ Escuchar") and texto.strip():
     audio = BytesIO()
 
-    tts = gTTS(
-        text=texto,
-        lang="es"
-    )
+    tts = gTTS(text=texto, lang="es")
     tts.write_to_fp(audio)
-
-    audio.seek(0)
 
     st.audio(
         audio.getvalue(),
-        format="audio/mpeg"
+        format="audio/mpeg",
+        autoplay=True
     )
